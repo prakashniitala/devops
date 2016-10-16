@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" 
+           uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +11,7 @@
     <script src="resource/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="resource/css/bootstrap.css">
      <link rel="stylesheet" type="text/css" href="resource/css/bootstrap.min.css">
+
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
@@ -57,28 +60,68 @@
  <br>
  <br>
  <br>
- <div class="container">
- 
-    <div class="col-md-4">
-       
-        <img src="resource/image/tshrt.jpeg" alt="Pulpit Rock" style="width:200px;height:250px">
-        <a href="resource/image/tshrt.jpeg" class="thumbnail">
-       <p>1000</p>
-       </a>
+
+  
+<!-- -----product -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="resource/image/tshrt.jpeg" class="img-responsive" style="height:220px" alt="Image"></div>
+        <div class="panel-footer">
+        <button type="button" class="btn btn-primary btn-lg">ADD TO CARD</button>
+        <a href="<c:url value="/productde/t-shirt"/>"  class="btn btn-primary btn-lg">VIEW</a>
+        
+        </div>
+      </div>
     </div>
-    <div class="col-md-4">1
-    
-        <img src="resource/image/tv.jpeg" alt="Moustiers Sainte Marie" style="width:200px;height:250px">
-      <a href="resource/image/tv.jpeg" class="thumbnail">
-     <p>1000</p>
-       </a>
+    <div class="col-sm-4">
+      <div class="panel panel-danger">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="resource/image/tv.jpeg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">.
+        <button type="button" class="btn btn-primary btn-lg">ADD TO CARD</button>
+      <a href="<c:url value="/productde/lg"/>"  class="btn btn-primary btn-lg">VIEW</a>
+        </div>
+      </div>
     </div>
-    <div class="col-md-4">
-    
-        <img src="resource/image/watch.jpeg" alt="Cinque Terre" style="width:200px;height:250px">
-      <a href="resource/image/tv.jpeg" class="thumbnail">
-     <p>1000</p>
-       </a>
+    <div class="col-sm-4">
+      <div class="panel panel-success">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="resource/image/tv1.jpeg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"><button type="button" class="btn btn-primary btn-lg">ADD TO CARD</button>
+        <button type="button" class="btn btn-primary btn-lg">VIEW</button></div>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"><button type="button" class="btn btn-primary btn-lg">ADD TO CARD</button>
+        <button type="button" class="btn btn-primary btn-lg">VIEW</button></div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"><button type="button" class="btn btn-primary btn-lg">ADD TO CARD</button>
+        <button type="button" class="btn btn-primary btn-lg">VIEW</button></div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"><button type="button" class="btn btn-primary btn-lg">ADD TO CARD</button>
+        <button type="button" class="btn btn-primary btn-lg">VIEW</button></div>
+      </div>
     </div>
   </div>
 </div>

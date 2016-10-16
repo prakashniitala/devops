@@ -4,15 +4,53 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="resource/js/jquery.min.js"></script>
-    <script src="resource/js/bootstrap.js"></script>
-    <link rel="stylesheet" type="text/css" href="resource/css/bootstrap.css">
+  
       <link rel="stylesheet" type="text/css" href="resource/css/slider.css">
 <script src="resource/js/slider.js"></script>
 
-
+<jsp:include page="Likingfile.jsp"></jsp:include>
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
+<br>
+<br>
+<br>
+<div class="container">
+<img src="resource/image/download.jpg" class="img-thumbnail" alt="CONTACTS" width="1344" height="236">
+</div>
+<div class="container">
+
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em>We love our fans!</em></p>
+  <div class="row test">
+    <div class="col-md-4">
+       <img src="resource/image/contactus.png" class="img-thumbnail" alt="CONTACTS" width="304" height="236">
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <div class="row">
+       <div class="col-md-12 form-group">
+       </div>
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div> 
+      <div class="col-md-4">
+      <p>Fan? Drop a note.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>NIIT ALAMBAGH LUCKNOW,INDIA</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +91 8175967544</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p> 
+    </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 
-angular.module('myApp', []).controller('namesCtrl', function($scope) {
+/*ngular.module('myApp', []).controller('namesCtrl', function($scope) {
     $scope.names = [
         {sno:'1',name:'Jani',brand:'lg',categrory:'mobile'},
         {sno:'2',name:'Carl',brand:'lg',categrory:'mobile'},
@@ -18,8 +18,16 @@ angular.module('myApp', []).controller('namesCtrl', function($scope) {
         {sno:'15',name:'Gustav',brand:'samsung',categrory:'mobile'},
         {sno:'16',name:'Birgit',brand:'samsung',categrory:'mobile'},
         {sno:'17',name:'Mary',brand:'samsung',categrory:'mobile'},
-        {sno:'18',name:'Kai',brand:'samsung',categrory:'mobile'}
-        ];
+        {sno:'18',name:'Kai',brand:'samsung',categrory:'mobile'},
+        {sno:'19',name:'t-shirt',brand:'samsung',categrory:'mobile'},
+        {sno:'20',name:'t-shirt',brand:'samsung',categrory:'mobile'},
+        {sno:'21',name:'shirt',brand:'samsung',categrory:'mobile'}
+        ];*/
+var app = angular.module('myApp', []);
+app.controller('productCtrl', function($scope, $http) {
+  $http.get("/prakash/product/all").then(function (response) {
+      $scope.myData = response.data;
+  });
     $scope.orderByMe = function(x) {
         $scope.myOrderBy = x;
     }

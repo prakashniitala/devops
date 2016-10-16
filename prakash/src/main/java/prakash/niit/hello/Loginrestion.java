@@ -1,7 +1,10 @@
 package prakash.niit.hello;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -20,6 +23,22 @@ public class Loginrestion {
 		  
 		ModelAndView view = new ModelAndView();
 		view.setViewName("Signup");
+		return view;
+	}
+	@RequestMapping(value={"/displayallproduct"})
+	public ModelAndView displayallproduct()
+	{
+		  
+		ModelAndView view = new ModelAndView();
+		view.setViewName("displayallproduct");
+		return view;
+	}
+	@RequestMapping(value={"/productde/{procat}"})
+	public ModelAndView productde(@PathVariable("procat") String st)
+	{
+	ModelAndView view = new ModelAndView();
+		view.setViewName("productde");
+		view.addObject("st",st);
 		return view;
 	}
 	@RequestMapping(value={"/productde"})

@@ -6,15 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="resource/js/jquery.min.js"></script>
-<script src="resource/js/bootstrap.js"></script>
-<script src="resource/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="resource/css/bootstrap.css">
- 
-<link rel="stylesheet" type="text/css"
-	href="resource/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+	<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	<jsp:include page="Likingfile.jsp"></jsp:include>
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
@@ -23,23 +16,23 @@
 <br>
 <div class="container">
 
-	<div ng-app="myApp" ng-controller="namesCtrl">
+	<div ng-app="myApp" ng-controller="productCtrl" ng-init="test='${st}'">
 		<p>
-			 <input type="text" class="form-control " id="usr" ng-model="test">
+			 <input type="text" class="form-control"  id="usr" ng-model="test">
 		</p>
 		<table class="table table-hover">
     <thead>
       <tr>
-       <th >S.No</th>
+       <th >ID</th>
 				<th ng-click="orderByMe('name')">Name</th>
-				<th ng-click="orderByMe('country')">brand</th>
-				<th ng-click="orderByMe('country')">Categrory</th>
+				<th ng-click="orderByMe('band)">brand</th>
+				<th ng-click="orderByMe('country')">price</th>
 			</tr>
-			<tr ng-repeat="x in names | orderBy:myOrderBy | filter:test">
-				<td>{{x.sno}}</td>
-				<td>{{x.name}}</td>
+			<tr ng-repeat="x in myData | orderBy:myOrderBy | filter:test">
+				<td>{{x.id}}</td>
+				<td>{{x.productname}}</td>
 				<td>{{x.brand}}</td>
-				<td>{{x.categrory}}</td>
+				<td>{{x.price}}</td>
 				
 				<td></td>
 				<td>
@@ -56,5 +49,6 @@
 	</div>
 	</div>
 	<script src="resource/js/product.js"></script>
+	
 </body>
 </html>
