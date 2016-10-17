@@ -77,6 +77,6 @@
     </div> 
  
   </div>
-
+<jsp:include page="foot.jsp"></jsp:include>
 </body>
 </html>

@@ -11,7 +11,7 @@
     <script src="resource/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="resource/css/bootstrap.css">
      <link rel="stylesheet" type="text/css" href="resource/css/bootstrap.min.css">
-
+   <!-- -- <link rel="stylesheet" type="text/css" href="resource/css/footerstyle.css"> -->
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
@@ -102,7 +102,7 @@
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-body"><img src="resource/image/1.jpg" class="img-responsive" style="width:85%" alt="Image"></div>
         <div class="panel-footer"><button type="button" class="btn btn-primary btn-lg">ADD TO CARD</button>
         <button type="button" class="btn btn-primary btn-lg">VIEW</button></div>
       </div>
@@ -110,7 +110,7 @@
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-body"><img src="resource/image/1(1).jpg" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer"><button type="button" class="btn btn-primary btn-lg">ADD TO CARD</button>
         <button type="button" class="btn btn-primary btn-lg">VIEW</button></div>
       </div>
@@ -118,7 +118,31 @@
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">BLACK FRIDAY DEAL</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-body"><img src="resource/image/2.jpg" class="img-responsive" style="width:85%" alt="Image"></div>
+        <div class="panel-footer"><button type="button" class="btn btn-primary btn-lg">ADD TO CARD</button>
+        <button type="button" class="btn btn-primary btn-lg">VIEW</button></div>
+      </div>
+    </div>
+     <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="resource/image/2_1(1).jpg" class="img-responsive" style="width:85%" alt="Image"></div>
+        <div class="panel-footer"><button type="button" class="btn btn-primary btn-lg">ADD TO CARD</button>
+        <button type="button" class="btn btn-primary btn-lg">VIEW</button></div>
+      </div>
+    </div>
+     <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="resource/image/2_1.jpg" class="img-responsive" style="width:85%" alt="Image"></div>
+        <div class="panel-footer"><button type="button" class="btn btn-primary btn-lg">ADD TO CARD</button>
+        <button type="button" class="btn btn-primary btn-lg">VIEW</button></div>
+      </div>
+    </div>
+     <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="resource/image/3.jpg" class="img-responsive" style="width:85%" alt="Image"></div>
         <div class="panel-footer"><button type="button" class="btn btn-primary btn-lg">ADD TO CARD</button>
         <button type="button" class="btn btn-primary btn-lg">VIEW</button></div>
       </div>

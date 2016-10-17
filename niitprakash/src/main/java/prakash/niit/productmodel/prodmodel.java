@@ -1,16 +1,26 @@
+
 package prakash.niit.productmodel;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Version;
+
+@Entity
 public class prodmodel {
-	public String id;
+	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
 	public String productname;
 	public double price;
 	public long qty;
 	public String brand;
 	public String Cati;
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getProductname() {

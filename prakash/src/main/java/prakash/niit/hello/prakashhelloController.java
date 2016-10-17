@@ -25,5 +25,10 @@ public class prakashhelloController {
         view.setViewName("Contacts"); //name of the jsp-file in the "page" folder  
         return view;
  }
-	
+	@RequestMapping(value={"/viewbyid"})  
+    public ModelAndView goviewbyid() {  
+        ModelAndView view = new ModelAndView();  
+        view.setViewName("viewbyid"); //name of the jsp-file in the "page" folder   
+        return view;
+ }	
 }

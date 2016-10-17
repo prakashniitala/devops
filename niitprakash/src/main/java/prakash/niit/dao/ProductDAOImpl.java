@@ -3,43 +3,54 @@ package prakash.niit.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import prakash.niit.productmodel.prodmodel;
 
-@Repository("productDAO")
+@Repository
+@Transactional
 public class ProductDAOImpl implements ProductDAO{
-
-	List<prodmodel> prodc;
+	
+@Autowired
+	private SessionFactory sessionFactory;
+	
+	
+	
 	@Override
 	public List<prodmodel> getAll() {
 		// TODO Auto-generated method stub
-		return prodc;
+		return sessionFactory.getCurrentSession().createQuery("from prodmodel").list();
 	}
-	public  ProductDAOImpl()
-	{
-		prodc = new ArrayList<prodmodel>();
-		prodmodel obj = new prodmodel();
-		obj.setId("1");
-		obj.setProductname("tv");
-		obj.setBrand("index");
-		obj.setCati("entro");
-		obj.setPrice(12000);
-		obj.setQty(23);
-		prodc.add(obj);
-		prodmodel obj1 = new prodmodel();
-		obj1.setId("1");
-		obj1.setProductname("tv");
-		obj1.setBrand("index");
-		obj1.setCati("entro");
-		obj1.setPrice(12000);
-		obj1.setQty(23);
-		prodc.add(obj1);
-	}
-
+	// add 
 	@Override
 	public void addproduct(prodmodel product) {
 		// TODO Auto-generated method stub
+		sessionFactory.getCurrentSession().persist(product);
+		
+	}
+	@Override
+	public void updatePerson(prodmodel p) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public List<prodmodel> listPersons() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public prodmodel getPersonById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public void removePerson(int id) {
+		// TODO Auto-generated method stub
+		
 		
 	}
 	
