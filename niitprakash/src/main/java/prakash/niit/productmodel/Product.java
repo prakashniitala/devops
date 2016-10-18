@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Version;
 
 @Entity
-public class prodmodel {
+public class Product {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;

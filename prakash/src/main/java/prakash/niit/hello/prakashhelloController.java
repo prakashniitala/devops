@@ -7,12 +7,13 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 
 public class prakashhelloController {
-	@RequestMapping(value={"/welcome","index","/"})  
-	    public ModelAndView goToHelloPage() {  
-	        ModelAndView view = new ModelAndView();  
-	        view.setViewName("index"); //name of the jsp-file in the "page" folder  
-	        return view;
-	 }
+
+	@RequestMapping(value={"/index","/"})  
+    public ModelAndView goindex() {  
+        ModelAndView view = new ModelAndView();  
+        view.setViewName("index"); //name of the jsp-file in the "page" folder   
+        return view;
+ }
 	@RequestMapping(value={"/about"})  
     public ModelAndView goToabout() {  
         ModelAndView view = new ModelAndView();  

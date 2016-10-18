@@ -34,9 +34,9 @@
 </dependency>
     <!-- https://mvnrepository.com/artifact/javaee/javaee-api -->
 <dependency>
-    <groupId>javaee</groupId>
+    <groupId>javax</groupId>
     <artifactId>javaee-api</artifactId>
-    <version>5</version>
+    <version>7.0</version>
 </dependency>
     <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 <dependency>

@@ -18,9 +18,9 @@
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categoroies <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="<c:url value="/Contacts"/>">TV</a></li>
-            <li><a href="<c:url value="/Contacts"/>">Mobile</a></li>
-            <li><a href="<c:url value="/Contacts"/>">Leptop</a></li>
+            <li><a href="<c:url value="/productde/tv"/>">TV</a></li>
+            <li><a href="<c:url value="/productde/Mobile"/>">Mobile</a></li>
+            <li><a href="<c:url value="/productde/t-shirt"/>">Laptop</a></li>
           </ul>
         </li>
         
@@ -28,7 +28,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="<c:url value="/Signup"/>"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="<c:url value="/Login"/>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>mn</ul>
+        <li><a href="<c:url value="/Login"/>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li></ul>
     </div>
   </div>
 </nav>

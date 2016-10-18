@@ -38,10 +38,10 @@
 				<td></td>
 				<td>
 				<div class="btn-group btn-group-lg">
-    <button type="button" class="btn btn-primary">VIEW</button>
-    <button type="button" class="btn btn-primary">EDIT</button>
-    <button type="button" class="btn btn-primary">DELETE</button>
-     <button type="button" class="btn btn-primary">ADD CART</button>
+   <a href="<c:url value="/viewbyid/{{x.id}}"/>"  class="btn btn-primary">VIEW</a>
+   <a href="<c:url value="/viewbyid/{{x.id}}"/>" class="btn btn-primary">EDIT</a>
+<a href="<c:url value="/viewbyid/{{x.id}}"/>"  class="btn btn-primary">DELETE</a>
+   <a href="<c:url value="/viewbyid/{{x.id}}"/>"  class="btn btn-primary">ADD CART</a>
   </div>
   </td>
 			</tr>

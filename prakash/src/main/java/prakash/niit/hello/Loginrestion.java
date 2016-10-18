@@ -48,6 +48,13 @@ public class Loginrestion {
 		view.setViewName("productde");
 		return view;
 	}
-
+	@RequestMapping(value={"/viewbyid/{procat}"})
+	public ModelAndView viewbyid(@PathVariable("procat") String id)
+	{
+	ModelAndView view = new ModelAndView();
+		view.setViewName("viewbyid");
+		view.addObject("id",id);
+		return view;
+	}
 
 }
