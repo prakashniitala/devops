@@ -1,68 +1,85 @@
+
 package prakash.niit.hello;
+
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import prakash.niit.dao.ProductDAO;
 import prakash.niit.productmodel.Product;
 
-
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
-
-
 	@Autowired
 	ProductDAO productDao;
 
-	
-	/*
-	display all the record to admin 
-	*/
-	
-	@RequestMapping(value="/viewall",method = RequestMethod.GET)
+	@RequestMapping(value = "/viewall")
 	public ModelAndView viewAllProductsAdmin() {
 		ModelAndView modelAndView = new ModelAndView("adminpage");
 		modelAndView.addObject("productData", productDao.getAll());
-		modelAndView.addObject("newProduct",new Product());
+		modelAndView.addObject("product", new Product());
 		return modelAndView;
 	}
 
-	@RequestMapping(value="/insert",method=RequestMethod.POST)
-	public ModelAndView insertProduct(@ModelAttribute("newProduct") Product product) {
-	ModelAndView modelAndView = new ModelAndView("adminpage");
-      productDao.addproduct(product);
-      
-		modelAndView.addObject("productData", productDao.getAll());
-		return modelAndView;
-	}
-	@RequestMapping(value="/delete/{procat}",method=RequestMethod.GET)
+	@RequestMapping(value = "/delete/{procat}")
 	public String removeproduct(@PathVariable("procat") Integer id) {
-		
-		//ModelAndView modelAndView = new ModelAndView("adminpage");
 		productDao.removeProduct(id);
-		//modelAndView.addObject("productData", productDao.getAll());
-return "redirect:/admin/insert";
+		return "redirect:/admin/viewall";
 	}
 
-	/*@RequestMapping(value ="/delete/{procat}", method = RequestMethod.POST)
-	public String deleteUser(@PathVariable("id") int id,
-		final RedirectAttributes redirectAttributes) {
-
-		//logger.debug("deleteUser() : {}", id);
-
-		productDao.removeProduct(id);
-
-		//redirectAttributes.addFlashAttribute("css", "success");
-		//redirectAttributes.addFlashAttribute("msg", "User is deleted!");
-
+	/*
+	 * @RequestMapping(value = "/insert", method = RequestMethod.POST) public
+	 * String insertProduct(@Valid @ModelAttribute("id") Product product,
+	 * BindingResult results, Model model) { if(results.hasErrors()) {
+	 * model.addAttribute("pid", product); model.addAttribute("productData",
+	 * productDao.getAll()); return "adminpage"; }
+	 * productDao.addproduct(product); if (product.getId() == 0) {
+	 * productDao.addproduct(product); } else {
+	 * 
+	 * productDao.updateProduct(product); }
+	 * 
+	 * return "redirect:/admin/viewall"; }
+	 * 
+	 */
+	@RequestMapping(value = "/insert", method = RequestMethod.POST)
+	public String insertProduct(@Valid @ModelAttribute("product") Product product, BindingResult results, Model model)
+	{
+		if (results.hasErrors()) {
+			model.addAttribute("product", product);
+			model.addAttribute("productData", productDao.getAll());
+			return ("adminpage");
+		}
 		
+		if (product.getId() == 0) {
+			MultipartFile file = product.getFile();
+			String originalfile = file.getOriginalFilename();
+			String filepath= Request.getSession();
+			String filename = filepath+"\\"
+			productDao.addproduct(product);
+		} else {
 
-	}*/
+			productDao.updateProduct(product);
+		}
+
+		return "redirect:/admin/viewall";
+	}
+
+	@RequestMapping("/edit/{id}")
+	public String editProduct(@PathVariable("id") int id, Model model) {
+		model.addAttribute("product", productDao.getProductById(id));
+		model.addAttribute("productData", productDao.getAll());
+		return "adminpage";
+	}
+
 }

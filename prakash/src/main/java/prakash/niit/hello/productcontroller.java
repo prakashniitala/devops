@@ -20,6 +20,7 @@ public class ProductController {
 	@Autowired
 
 	ProductDAO productDAO;
+	
 
 	@RequestMapping(value = { "/product/all" })
 	@ResponseBody
@@ -36,12 +37,12 @@ public class ProductController {
 		return obj;
 	}*/
 
-	@RequestMapping("/update/{procat}")
+/*	@RequestMapping("/update/{procat}")
 	public ModelAndView updateproduct(@PathVariable("procat") Integer id) {
 		productDAO.updateProduct(id);
 		ModelAndView obj = new ModelAndView("productde");
 
 		return obj;
 	}
-
+*/
 }
