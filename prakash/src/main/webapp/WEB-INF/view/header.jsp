@@ -28,7 +28,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
       
-        <li><a href="<c:url value="admin/viewall"/>"> Sign Up</a></li>
+        <li><a href="<c:url value="admin/viewall"/>">ADMIN</a></li>
       
         <li><a href="<c:url value="/Signup"/>"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href="<c:url value="/Login"/>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li></ul>

@@ -62,10 +62,10 @@ public class AdminController {
 		}
 		
 		if (product.getId() == 0) {
-			MultipartFile file = product.getFile();
+			/*MultipartFile file = product.getFile();
 			String originalfile = file.getOriginalFilename();
 			String filepath= Request.getSession();
-			String filename = filepath+"\\"
+			String filename = filepath+"\\"*/
 			productDao.addproduct(product);
 		} else {
 

@@ -42,15 +42,15 @@
         	<form:errors path="category" cssclass="error"/>
     </tr> 
 <tr>
-<td>
+<%-- <td>
 <form:label path="file'">CHOOSE FILE</form:label></td>
 <td>
 <form:input path="file" type="file" required="requried"/>
-</td>
+</td> --%>
 
 </tr>
 		<tr>
-			<td colspan="2"><input type="submit" value="Submit" /></td>
+			<td colspan="2"><input type="submit" value="ADD PRODUCT" /></td>
 			<td colspan="2"><input type="reset" value="Reset" /></td>
 
 		</tr>
@@ -58,13 +58,20 @@
 </form:form>
 <%-- <h3>Persons List</h3>
 <c:if test="${!empty productData}"> --%>
-
+<table class="table">
+<tr>
+	<th>
+	PRODUCT ID</th>
+	<Th>PRODUCT NAME</Th>
+	<TH>PRODUCT Quantity</TH>
+	<th>PRODUCT CATEGORY</th>
+	<th>PRODUCT BRAND</th>
+	<th>PRODUCT PRICE</TH>
+	</tr>
 <c:forEach items="${productData}" var="product">
 
-	<table class="table">
-	<tr>
 	
-	</tr>
+	
 		<tr>
 			<td>${product.id}</td>
 			<td>${product.productname}</td>
